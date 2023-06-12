@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Query Form</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background: url("qani.gif") no-repeat center center fixed;
+      background-size: cover;
+    }
+    
+    .transparent-container {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 100px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      position: relative;
+    }
+
+    .logo {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 50px;
+      height: 50px;
+      background-image: url("cooltext436484514948904.png");
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="container transparent-container">
+    <div class="logo"></div>
+    <h2>Write Your Query</h2>
+    <form method="post" action="http://localhost:3000/contact" method="POST">
+        <div class="form-group">
+            <label for="full_name">Name</label>
+            <input type="text" id="full_name" class="form-control" name="cqname" required>
+        </div>
+      <div class="form-group">
+        <label for="Query">Query?</label>
+        <textarea class="form-control" rows="4" id="query" name="cquery" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send</button>
+      <a href="home.html" class="btn btn-primary">Home</a>
+    </form>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Display alert on successful form submission
+    $('form').submit(function() {
+      alert('Form submitted successfully!');
+    });
+  </script>
+</body>
+</html>

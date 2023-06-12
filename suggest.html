@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Suggestion</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-image: url("ploio.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+    
+    .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+        }
+
+        /* Adjust the styling of the logo image as needed */
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    .transparent-container {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      padding: 20px;
+      margin: 100px auto;
+      max-width: 400px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="cooltext436484514948904.png" alt="Logo">
+  </div>
+  
+  <div class="container transparent-container">
+    <h2>Write down the book you need</h2>
+    <form id="bookForm"  onsubmit="submitForm() "action="http://localhost:3000/suggest" method="POST">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="sgname"required>
+      </div>
+      <div class="form-group">
+        <label for="bookName">Book Name:</label>
+        <input type="text" class="form-control" id="bookName" name="sgreq"required>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <a href="home.html">Home</a>
+      
+    </form>
+  </div>
+
+  <script>
+    function submitForm(event) {
+      event.preventDefault();
+      alert("Suggestion sent");
+      document.getElementById("bookForm").reset();
+    }
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
